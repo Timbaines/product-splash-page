@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #191919;
+    margin: 0;
+    user-select: none;
+}
+
+/* ==== Typography ==== */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-shadow: 0 2px #404040;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;
+}
+
+.beta-text {
+    font-weight: 900;
+}
+
+.subheading {
+    color: #404040;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+}
+
+.top-text {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding: 0.5em .75em;
+    border: none;
+    background: #BFA181;
+    color: #191919;
+    border-radius: 100px;
+    order: -1;
+    width: fit-content;
+}
+
+.beta-text,
+.top-text,
+.subheading {
+    text-transform: uppercase;
+}
+
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
+/* ==== Flex Containers ==== */
+.intro,
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.25em;
+    padding-right: 2.25em;
+}
+
+/* ==== Intro ==== */
+.intro {
+    position: relative;
+    justify-content: space-between;
+    min-height: 250px;
+    text-align: left;
+    color: #BFA181;
+    background: #000000 url("images/guitar-lessons.png") center right;
+    background-size: cover;
+    padding-bottom: 1.5em;
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.intro h1,
+.intro .beta-text,
+.intro .top-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==== Main Content ==== */
+.main-content {
+    align-items: center;
+    padding-top: 2.5em;
+}
+
+.img-main {
+    width: 150px;
+}
+
+.main-content p,
+form {
+    max-width: 450px;
+}
+
+/* ==== Form | Button ==== */
+input,
+button {
+    font-family: inherit;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    padding: 1em ;
+    margin-bottom: 0.75em;
+    border: 2px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0594a3;
+    background-color: #e6e8ec;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #191919;
+    margin-top: 1em;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #323232;
+}
+
+/* ==== Media queries ==== */
+@media (min-width: 576px) {
+    body {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 2.625rem;
+    }
+
+    .beta-text {
+        font-size: 1.25rem;
+    }
+
+    .intro,
+    .main-content {
+        width: 50%;
+    }
+
+    .intro {
+        min-height: 100vh;
+    }
+
+    .main-content {
+        justify-content: center;
+        padding-top: 0;
+    }
+}
